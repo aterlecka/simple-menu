@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+
+  background-image: url("image.jpg");
+  
+}
+
+#element
+{
+  display:none;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 50%);
+  transform-origin: 25px 25px; 
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar {
+  display: flex;
+
+}
+
+.first{
+  display: none;
+  margin-left: 0px;
+  height: 30px;
+  width: 100px;
+  
+ 
+}
+ 
+#second{
+    margin-left: 0px;
+    height: 30px;
+    width: 120px;
+    
+}
+
+.third{
+  display: none;
+  margin-left:0px;
+  height: 30px;
+  width: 100px;
+  
+
+
+}
+
+
+
+

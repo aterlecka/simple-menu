@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+ <link rel="stylesheet" href="style.css">
+ <script src="active.js"></script>
+
+</head>
+<body >
+  
+<div id="container">
+<div id="element"> 
+   
+<div class="navbar">
+   
+    <button id="second" class="dropbtn second"  onClick="animateMe()"><i class="material-icons">menu</i> </button>
+    <button id="first" class="self first" onClick="message()" ><i class="material-icons">message</i></button>
+    <button onclick="window.location.href='tel:123-456-789'"id="third" class="self third"><i class="material-icons">phone</i></a></button>
+    
+  </div> 
+</div>
+</div>
+  </div>
+
+
+<script>
+var element = document.getElementById('element');
+var targetBox = document.getElementById('container');
+
+document.addEventListener('click', mouseClicked);
+
+function mouseClicked (event){
+  document.getElementById("element").style.display="block";
+
+  var xposition = (event.clientX - element.offsetLeft - element.offsetWidth/2);
+  var yposition = (event.clientY - element.offsetTop - element.offsetHeight/2);
+  element.style.transform = "translate("+ xposition + "px," + yposition + "px)";
+}
+
+
+function animatedFirst(obj, from, to){
+
+  document.getElementById("first").style.display="block";
+  document.getElementById("third").style.display="block";
+
+
+ if(from >= to){         
+       obj.style.visibility = 'block';
+       return;  
+   }
+   else {
+       var box = obj;
+       box.style.marginRight = from + "px";
+       setTimeout(function(){
+           animatedFirst(obj, from + 1, to);
+       }, 6) 
+   }
+  }
+     function animateMe() {
+      
+      animatedFirst(document.getElementById('first'), -70, 1);
+}
+  function message() {
+  alert("Hello!");
+}
+
+
+</script>
+</body>
+</html>
